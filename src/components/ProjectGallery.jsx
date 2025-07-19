@@ -39,7 +39,7 @@ function ProjectGallery() {
   }, []);
 
   return (
-    <div className="p-6 mt-4 space-y-6">
+    <div className="flex flex-col h-[calc(100vh-200px)] p-6 space-y-6">
       <FilterBar
         years={years}
         keywords={keywords}
@@ -51,7 +51,7 @@ function ProjectGallery() {
 
       <div
         ref={scrollRef}
-        className="flex gap-6 pb-6 overflow-x-auto scrollbar-hide"
+        className="flex flex-1 gap-6 pb-6 overflow-x-auto scrollbar-hide"
       >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (

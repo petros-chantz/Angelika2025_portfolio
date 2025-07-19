@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function ProjectCard({ post }) {
   return (
     <Link to={`/projects/${post.id}`} className="block">
-      <div className="w-[600px] flex-1 bg-white rounded-xl shadow hover:shadow-md transition flex flex-col mb-6 overflow-hidden relative min-h-0">
+      <div className="w-[600px] h-full bg-white rounded-sm flex flex-col overflow-hidden relative">
         <img
           src={post.image}
           alt={post.alt || `${post.title} image`}

@@ -15,7 +15,7 @@ function FilterBar({
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-between p-6">
+    <div className="flex flex-wrap items-center justify-between">
       {/* Years */}
       <div className="flex flex-wrap items-center gap-4">
         {sortedYears.map((year) => (
