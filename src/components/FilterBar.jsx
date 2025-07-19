@@ -6,10 +6,19 @@ function FilterBar({
   selectedKeyword,
   setSelectedKeyword,
 }) {
+  // Sort years: "All" first, then ascending numbers
+  const sortedYears = [
+    "All",
+    ...years
+      .filter((year) => year !== "All")
+      .sort((a, b) => Number(a) - Number(b)),
+  ];
+
   return (
     <div className="flex flex-wrap items-center justify-between p-6">
+      {/* Years */}
       <div className="flex flex-wrap items-center gap-4">
-        {years.map((year) => (
+        {sortedYears.map((year) => (
           <button
             key={year}
             onClick={() => setSelectedYear(year)}
@@ -24,6 +33,7 @@ function FilterBar({
         ))}
       </div>
 
+      {/* Keywords */}
       <div className="flex flex-wrap items-center gap-4 mt-4 sm:mt-0">
         {keywords.map((keyword) => (
           <button
