@@ -7,7 +7,69 @@ const projects = [
     image: "/project_images/house01.jpg",
     alt: "Modern home image",
     keywords: ["architecture"],
-    description: `...`,
+    description: `
+# Rethinking Urban Spaces: Human-Centered Design in the 21st Century
+
+*By Angela M. | July 20, 2025*
+
+![Urban sketch of a modern plaza](https://example.com/images/modern-plaza-sketch.jpg)
+
+---
+
+## Introduction
+
+Cities are growing faster than ever, but are they growing smarter? The modern urban environment presents challenges that demand more than structural innovation — they call for **human-centered design**.
+
+In this post, we explore how architecture can shift from ego-driven monuments to inclusive, responsive spaces.
+
+---
+
+## What is Human-Centered Design?
+
+> “Design is not just what it looks like and feels like. Design is how it works.” — *Steve Jobs*
+
+Human-centered design focuses on the **needs, behaviors, and experiences** of people. In architecture, this means designing not just for the skyline, but for the street level — where real life unfolds.
+
+### Principles:
+- Empathy for end users
+- Iterative prototyping
+- Context-sensitive design
+
+---
+
+## Case Study: The Superkilen Park, Copenhagen
+
+Superkilen is a public park that redefines what communal space can be. Instead of a uniform design, it features objects and symbols from over 60 different nationalities — reflecting the local immigrant population.
+
+![Colorful paths at Superkilen](https://example.com/images/superkilen-park.jpg)
+
+**Why it works:**
+- Culturally inclusive elements
+- Accessible design for all ages
+- Seamless integration with public transit
+
+---
+
+## Challenges & Opportunities
+
+While cities race toward "smart" solutions, many still neglect:
+
+- Walkability and public health
+- Affordable housing
+- Climate-responsive infrastructure
+
+Yet, this also opens space for **architects as advocates**, collaborating across disciplines to shape not just buildings, but better futures.
+
+---
+
+## Conclusion
+
+Architecture today must answer more than aesthetic questions — it must respond to **how we live, connect, and belong**. Human-centered design offers a hopeful path forward.
+
+---
+
+*Have thoughts or favorite examples of human-centered architecture? Share them in the comments below or tag me on [Instagram](https://instagram.com/yourhandle).*
+    `,
   },
   {
     id: "2",
