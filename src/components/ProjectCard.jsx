@@ -1,24 +1,36 @@
 import { Link } from "react-router-dom";
 
-function ProjectCard({ post }) {
+function ProjectCard({ post, className = "" }) {
+  const { id, title, year, location, images } = post;
+
   return (
-    <Link to={`/project/${post.id}`} className="block">
-      <div className="w-[600px] h-full bg-white rounded-sm flex flex-col overflow-hidden transition-transform duration-300 group">
-        {/* Image with hover zoom effect */}
-        <div className="overflow-hidden">
+    <Link
+      to={`/project/${id}`}
+      className={`group block w-full h-full ${className}`}
+      aria-label={`View project ${title}`}
+    >
+      <article className="flex flex-col w-full h-full overflow-hidden bg-white rounded-sm">
+        {/* Image */}
+        <div className="relative w-full h-[300px] overflow-hidden bg-gray-100">
           <img
-            src={post.image}
-            alt={post.alt || `${post.title} image`}
-            className="object-cover w-full h-full transition-transform duration-500 bg-gray-200 group-hover:scale-105"
+            src={images?.cover?.src}
+            alt={images?.cover?.alt || title}
+            className="object-cover w-full h-full transition-transform duration-500 ease-out group-hover:scale-105"
+            loading="lazy"
           />
         </div>
 
-        {/* Text content below */}
-        <div className="py-4">
-          <h3 className="text-lg font-semibold text-gray-900">{post.title}</h3>
-          <span className="text-sm text-gray-600">Year: {post.year}</span>
+        {/* Text */}
+        <div className="flex flex-col flex-1 gap-1 py-4">
+          <h3 className="text-lg font-semibold leading-tight text-gray-900">
+            {title}
+          </h3>
+
+          <p className="text-sm text-gray-600 ">
+            {location?.city}, {location?.country} · {year}
+          </p>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

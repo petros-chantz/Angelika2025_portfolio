@@ -1,13 +1,32 @@
+/**
+ * Best-practice shape:
+ * - numeric year (not string)
+ * - consistent fields across items
+ * - location grouped (city + country)
+ * - images grouped (src + alt)
+ * - keywords normalized (lowercase)
+ * - optional long-form content kept in `content.markdown`
+ */
+
 const projects = [
   {
-    id: "1",
+    id: "modern-home",
     title: "Modern Home",
     subtitle: "A minimal home design.",
-    year: "2022",
-    image: "/project_images/house01.jpg",
-    alt: "Modern home image",
+    year: 2022,
     keywords: ["architecture"],
-    description: `
+    location: {
+      city: "Copenhagen",
+      country: "Denmark",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house01.jpg",
+        alt: "Modern home image",
+      },
+    },
+    content: {
+      markdown: `
 # Rethinking Urban Spaces: Human-Centered Design in the 21st Century
 
 *By Angela M. | July 20, 2025*
@@ -21,21 +40,6 @@ const projects = [
 Cities are growing faster than ever, but are they growing smarter? The modern urban environment presents challenges that demand more than structural innovation — they call for **human-centered design**.
 
 In this post, we explore how architecture can shift from ego-driven monuments to inclusive, responsive spaces.
-
----
-
-## What is Human-Centered Design?
-
-> “Design is not just what it looks like and feels like. Design is how it works.” — *Steve Jobs*
-
-Human-centered design focuses on the **needs, behaviors, and experiences** of people. In architecture, this means designing not just for the skyline, but for the street level — where real life unfolds.
-
-### Principles:
-- Empathy for end users
-- Iterative prototyping
-- Context-sensitive design
-
----
 
 ## Case Study: The Superkilen Park, Copenhagen
 
@@ -69,88 +73,197 @@ Architecture today must answer more than aesthetic questions — it must respond
 ---
 
 *Have thoughts or favorite examples of human-centered architecture? Share them in the comments below or tag me on [Instagram](https://instagram.com/yourhandle).*
-    `,
+      `,
+    },
   },
+
   {
-    id: "2",
+    id: "office-space",
     title: "Office Space",
     subtitle: "Interior redesign of workspace.",
-    year: "2021",
-    image: "/project_images/house02.jpg",
-    alt: "Office space image",
+    year: 2021,
     keywords: ["model making"],
+    location: {
+      city: "Rotterdam",
+      country: "Netherlands",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house02.jpg",
+        alt: "Office space image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "3",
+    id: "urban-loft",
     title: "Urban Loft",
     subtitle: "Modern loft apartment design.",
-    year: "2023",
-    image: "/project_images/house03.jpg",
-    alt: "Urban loft image",
+    year: 2023,
     keywords: ["architecture"],
+    location: {
+      city: "Berlin",
+      country: "Germany",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house03.jpg",
+        alt: "Urban loft image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "4",
+    id: "eco-retreat",
     title: "Eco Retreat",
     subtitle: "Sustainable vacation home in nature.",
-    year: "2022",
-    image: "/project_images/house04.jpg",
-    alt: "Eco retreat image",
+    year: 2022,
     keywords: ["architecture"],
+    location: {
+      city: "Reykjavík",
+      country: "Iceland",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house04.jpg",
+        alt: "Eco retreat image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "5",
+    id: "creative-studio",
     title: "Creative Studio",
     subtitle: "Multi-functional studio for artists.",
-    year: "2020",
-    image: "/project_images/house05.jpg",
-    alt: "Creative studio image",
+    year: 2020,
     keywords: ["model making"],
+    location: {
+      city: "Barcelona",
+      country: "Spain",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house05.jpg",
+        alt: "Creative studio image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "6",
+    id: "glass-house",
     title: "Glass House",
     subtitle: "A fully transparent living space concept.",
-    year: "2023",
-    image: "/project_images/house06.jpg",
-    alt: "Glass house image",
+    year: 2023,
     keywords: ["concept design"],
+    location: {
+      city: "Zürich",
+      country: "Switzerland",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house06.jpg",
+        alt: "Glass house image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "7",
+    id: "mountain-cabin",
     title: "Mountain Cabin",
     subtitle: "Remote cabin with panoramic views.",
-    year: "2021",
-    image: "/project_images/house07.jpg",
-    alt: "Mountain cabin image",
+    year: 2021,
     keywords: ["architecture"],
+    location: {
+      city: "Innsbruck",
+      country: "Austria",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house07.jpg",
+        alt: "Mountain cabin image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "8",
+    id: "library-lounge",
     title: "Library Lounge",
     subtitle: "Community reading and study area.",
-    year: "2022",
-    image: "/project_images/house08.jpg",
-    alt: "Library lounge image",
+    year: 2022,
     keywords: ["model making"],
+    location: {
+      city: "Stockholm",
+      country: "Sweden",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house08.jpg",
+        alt: "Library lounge image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "9",
+    id: "futuristic-kitchen",
     title: "Futuristic Kitchen",
     subtitle: "Smart and minimal cooking space.",
-    year: "2023",
-    image: "/project_images/house09.jpg",
-    alt: "Futuristic kitchen image",
+    year: 2023,
     keywords: ["concept design"],
+    location: {
+      city: "Milan",
+      country: "Italy",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house09.jpg",
+        alt: "Futuristic kitchen image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
+
   {
-    id: "10",
+    id: "zen-garden-room",
     title: "Zen Garden Room",
     subtitle: "Meditation space integrated with nature.",
-    year: "2020",
-    image: "/project_images/house10.jpg",
-    alt: "Zen garden room image",
+    year: 2020,
     keywords: ["concept design"],
+    location: {
+      city: "Kyoto",
+      country: "Japan",
+    },
+    images: {
+      cover: {
+        src: "/project_images/house10.jpg",
+        alt: "Zen garden room image",
+      },
+    },
+    content: {
+      markdown: "",
+    },
   },
 ];
 
