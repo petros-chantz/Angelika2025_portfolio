@@ -8,8 +8,8 @@ function FilterBar({ years, keywords, selectedKeyword, setSelectedKeyword }) {
             onClick={() => setSelectedKeyword(keyword)}
             className={`px-2 py-1 text-lg transition capitalize ${
               selectedKeyword === keyword
-                ? "text-black font-semibold underline"
-                : "text-gray-700 hover:text-[#ca3500]"
+                ? "text-gray-800 opacity-100 font-medium "
+                : "text-gray-800 opacity-70 font-medium hover:text-[#ca3500]"
             }`}
           >
             {keyword}
