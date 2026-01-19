@@ -2,17 +2,17 @@ import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   const baseLinkClasses =
-    "text-2xl text-gray-800 hover:text-[#ca3500] transition-colors";
+    "text-xl text-gray-800 hover:text-[#ca3500] transition-colors";
 
   const navLinkClasses = ({ isActive }) =>
-    `${baseLinkClasses} ${isActive ? "font-semibold" : "font-normal"}`;
+    `${baseLinkClasses} ${isActive ? "opacity-100" : "opacity-70"}`;
 
   return (
     <nav className="w-full p-8">
       <div className="flex items-center justify-between">
         <Link
           to="/"
-          className="text-4xl font-medium hover:text-[#ca3500] transition-colors"
+          className="text-2xl tracking-wide font-medium hover:text-[#ca3500] transition-colors"
         >
           Angelika Chantzopoulou
         </Link>
